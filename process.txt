@@ -1,0 +1,249 @@
+AFTER CREATING SECOND REPO FOLDER IN LOCAL PC,
+git init
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git commit -m 'second repo added with two files'
+[master (root-commit) 1e33153] second repo added with two files
+ 2 files changed, 14 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 style.css
+PS C:\Users\HP\Desktop\git-demo\second-repo> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote add https://github.com/jainastha894/second-repo.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote -v
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote -v
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch -M main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch
+* main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote -v
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote remove origin
+error: No such remote: 'origin'
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote add origin https://github.com/jainastha894/second-repo.git
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote -v
+origin  https://github.com/jainastha894/second-repo.git (fetch)
+origin  https://github.com/jainastha894/second-repo.git (push)
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch
+* main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push origin main
+To https://github.com/jainastha894/second-repo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/jainastha894/second-repo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\HP\Desktop\git-demo\second-repo> git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 911 bytes | 6.00 KiB/s, done.
+From https://github.com/jainastha894/second-repo
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote add origin1 https://github.com/jainastha894/second-repo.git
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push origin1 main
+To https://github.com/jainastha894/second-repo.git
+ ?[31m! [rejected]       ?[m main -> main (non-fast-forward)
+?[31merror: failed to push some refs to 'https://github.com/jainastha894/second-repo.git'
+?[mhint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\HP\Desktop\git-demo\second-repo> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> main
+
+PS C:\Users\HP\Desktop\git-demo\second-repo>
+ *  History restored 
+
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+
+
+
+
+PS C:\Users\HP\Desktop\git-demo> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\HP\Desktop\git-demo>
+ *  History restored 
+
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\HP\Desktop\git-demo> cd second-repo
+PS C:\Users\HP\Desktop\git-demo\second-repo> git init
+Initialized empty Git repository in C:/Users/HP/Desktop/git-demo/second-repo/.git/
+PS C:\Users\HP\Desktop\git-demo\second-repo> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\HP\Desktop\git-demo\second-repo> git add .
+PS C:\Users\HP\Desktop\git-demo\second-repo> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git commit -m 'initial files'
+[master (root-commit) efed7e9] initial files
+ 2 files changed, 16 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 style.css
+PS C:\Users\HP\Desktop\git-demo\second-repo> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote add second-remote  https://github.com/jainastha894/second-repo.git
+PS C:\Users\HP\Desktop\git-demo\second-repo> git remote -v
+second-remote   https://github.com/jainastha894/second-repo.git (fetch)
+second-remote   https://github.com/jainastha894/second-repo.git (push)
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch
+* master
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch -M main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git branch
+* main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push second-remote main
+To https://github.com/jainastha894/second-repo.git
+ ?[31m! [rejected]       ?[m main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/jainastha894/second-repo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\HP\Desktop\git-demo\second-repo> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 1.70 KiB | 10.00 KiB/s, done.
+From https://github.com/jainastha894/second-repo
+ * [new branch]      main       -> second-remote/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=second-remote/<branch> main
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git pull second-remote main
+From https://github.com/jainastha894/second-repo
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push second-remote main (OR GIT PUSH -U SECOND-REMOTE MAIN) SO THAT WE JUST WOULD NEED TO WRITE GIT PUSH TO PUSH FURTHER CHANGES
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 454 bytes | 113.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jainastha894/second-repo.git
+ * [new branch]      main -> main
+PS C:\Users\HP\Desktop\git-demo\second-repo> git add .
+PS C:\Users\HP\Desktop\git-demo\second-repo> git commit -m 'readme file added'
+[main c5b3a42] readme file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream second-remote main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push second-remote
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream second-remote main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push (COULD HAVE BEEN DONE IF -U WAS USED WHIILE PUSHING)
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream second-remote main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\HP\Desktop\git-demo\second-repo> git push second-remote main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jainastha894/second-repo.git
+   efed7e9..c5b3a42  main -> main
+PS C:\Users\HP\Desktop\git-demo\second-repo>
